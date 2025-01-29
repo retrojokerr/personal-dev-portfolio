@@ -124,7 +124,7 @@ import Tabs from '../components/Tabs.vue'
 import Email from '../components/Email.vue'
 export default {
   metaInfo: {
-    title: "Subandhu - Portfolio",
+    title: "Subandhu.tech",
   },
   components: {
     Tab,
