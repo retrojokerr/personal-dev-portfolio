@@ -6,11 +6,14 @@ import { faAt, faDatabase, faBars, faLink, faEye, faCodeFork, faRss } from '@for
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-export default function (Vue) {
+export default function (Vue, { head }) {  // Add 'head' argument
 
   library.add(faGithub, faTwitter, faDiscord, faJs, faVuejs, faGolang, faCss3, faNode, faLinkedin, faAt, faDatabase, faBars, faLink, faEye, faCodeFork, faRss)
 
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.component('AppIcon', FontAwesomeIcon)
+
+  // Set a global title format
+  head.titleTemplate = '%s - Subandhu.tech'  // Titles will follow this format
 }

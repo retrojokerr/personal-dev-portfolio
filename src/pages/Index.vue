@@ -123,8 +123,10 @@ import Tab from '../components/Tab.vue'
 import Tabs from '../components/Tabs.vue'
 import Email from '../components/Email.vue'
 export default {
-  metaInfo: {
-    title: "Subandhu.tech",
+  metaInfo() {
+  return {
+      title: "Home | Subandhu.tech"
+    }
   },
   components: {
     Tab,
