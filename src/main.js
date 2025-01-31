@@ -15,5 +15,5 @@ export default function (Vue, { head }) {  // Add 'head' argument
   Vue.component('AppIcon', FontAwesomeIcon)
 
   // Set a global title format
-  head.titleTemplate = '%s - Subandhu.tech'  // Titles will follow this format
+  head.titleTemplate = '%s'  // Titles will follow this format
 }
