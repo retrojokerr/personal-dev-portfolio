@@ -36,36 +36,32 @@
           </div>
         </div>
 
-        <!-- Article List Section -->
-        <div class="contain mt-16 flex flex-col gap-3">
-          <a href="https://dev.to/jbhv12" target="_blank" class="font-semibold text-xl">
-            Posts
-            <app-icon class="text-dimGrey" icon="link" size="sm"></app-icon>
-          </a>
-          <div class="flex flex-col gap-3">
-            <article class="flex md:flex-row flex-col md:items-center items-start md:gap-10 gap-0 md:pb-3 pb-5">
-              <p class="text-dimGreyAlt">09 Feb 2024</p>
-              <a href="https://dev.to/jbhv12/oauth-terms-explained-in-one-sentence-2all" class="text-dimGrey decoration-cuppy underline underline-offset-4">
-                OAuth Terms Explained in One Sentence
-              </a>
-            </article>
-            
-            <article class="flex md:flex-row flex-col md:items-center items-start md:gap-10 gap-0 md:pb-3 pb-5">
-              <p class="text-dimGreyAlt">15 Dec 2023</p>
-              <a href="https://dev.to/jbhv12/red-jingles-a-holiday-theme-based-ai-chatbot-5fl8" class="text-dimGrey decoration-cuppy underline underline-offset-4">
-                Scaling Cheer: A Deep Dive into the Architecture of Red Jingles AI Chatbot
-              </a>
-            </article>
+      <!-- Projects List Section -->
+      <div class="contain mt-16 flex flex-col gap-3">
+        <a href="https://github.com/retrojokerr" target="_blank" class="font-semibold text-xl">
+          Projects
+          <app-icon class="text-dimGrey" icon="link" size="sm"></app-icon>
+        </a>
+        <div class="flex flex-col gap-3">
+          <article class="flex md:flex-row flex-col md:items-center items-start md:gap-10 gap-0 md:pb-3 pb-5">
+            <a href="https://github.com/retrojokerr/FILE-WIZARD" class="text-dimGrey decoration-cuppy underline underline-offset-4">
+              File Wizard - A file conversion website using Python and AWS (Lambda, S3).
+            </a>
+          </article>
+          
+          <article class="flex md:flex-row flex-col md:items-center items-start md:gap-10 gap-0 md:pb-3 pb-5">
+            <a href="https://www.shawty.site" class="text-dimGrey decoration-cuppy underline underline-offset-4">
+              URL Shortener - A Node.js-based URL shortening service with MongoDB.
+            </a>
+          </article>
 
-             <article class="flex md:flex-row flex-col md:items-center items-start md:gap-10 gap-0 md:pb-3 pb-5">
-              <p class="text-dimGreyAlt">04 Apr 2024</p>
-              <a href="https://dev.to/jbhv12/inversion-of-control-ioc-demystifying-the-familiar-pattern-2003" class="text-dimGrey decoration-cuppy underline underline-offset-4">
-                Inversion of Control (IoC): Demystifying the Familiar Pattern
-              </a>
-            </article>
-            
-          </div>
+          <article class="flex md:flex-row flex-col md:items-center items-start md:gap-10 gap-0 md:pb-3 pb-5">
+            <a href="https://github.com/retrojokerr/Social-Media-App-API" class="text-dimGrey decoration-cuppy underline underline-offset-4">
+              Social Media App API - RESTful API with authentication, posts, comments, and real-time chat.
+            </a>
+          </article>
         </div>
+      </div>
 
         <!-- Work Experience Section -->
         <div class="contain mt-16 flex flex-col gap-3">
