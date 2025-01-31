@@ -63,17 +63,12 @@
         </div>
       </div>
 
-       <!-- Work Highlights Section -->
-      <div class="contain mt-16 flex flex-col gap-3">
-        <h2 class="text-xl font-semibold">Work Highlights</h2>
-        
-        <div class="flex flex-col md:flex-row md:items-start gap-5">
-          <p class="text-pink-400 font-medium min-w-[150px]">BSES Delhi</p>
+        <!-- Work Experience Section -->
+        <div class="contain mt-16 flex flex-col gap-3">
+          <h2 class="text-xl font-semibold">Work Highlights</h2>
           <tabs :mode="mode">
-            <tab title="Software Developer Trainee" company="BSES" companyURL="https://www.bsesdelhi.com/" :itemList="bsesItemList"/>
+            <tab title="BSES Delhi" position="Software Developer Trainee" company="BSES" companyURL="https://www.bsesdelhi.com/" :itemList="bsesItemList"/>
           </tabs>
-        </div>
-      </div>
 
 
 <div style="margin-top: 10px; align-self: flex-start; display: flex; align-items: flex-end;">
