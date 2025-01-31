@@ -29,83 +29,51 @@
               <app-icon icon="fab fa-twitter" size="lg"></app-icon>
             </a>
 
-
             <a href="mailto:subandhu2018@gmail.com">
               <app-icon icon="at" size="lg"></app-icon>
             </a>
           </div>
         </div>
 
-      <!-- Projects List Section -->
-      <div class="contain mt-16 flex flex-col gap-3">
-        <a href="https://github.com/retrojokerr" target="_blank" class="font-semibold text-xl">
-          Projects
-          <app-icon class="text-dimGrey" icon="link" size="sm"></app-icon>
-        </a>
-        <div class="flex flex-col gap-3">
-          <article class="flex md:flex-row flex-col md:items-center items-start md:gap-10 gap-0 md:pb-3 pb-5">
-            <a href="https://github.com/retrojokerr/FILE-WIZARD" class="text-dimGrey decoration-cuppy underline underline-offset-4">
-              File Wizard - A file conversion website using Python and AWS (Lambda, S3).
-            </a>
-          </article>
-          
-          <article class="flex md:flex-row flex-col md:items-center items-start md:gap-10 gap-0 md:pb-3 pb-5">
-            <a href="https://www.shawty.site" class="text-dimGrey decoration-cuppy underline underline-offset-4">
-              URL Shortener - A Node.js-based URL shortening service with MongoDB.
-            </a>
-          </article>
-
-          <article class="flex md:flex-row flex-col md:items-center items-start md:gap-10 gap-0 md:pb-3 pb-5">
-            <a href="https://github.com/retrojokerr/Social-Media-App-API" class="text-dimGrey decoration-cuppy underline underline-offset-4">
-              Social Media App API - RESTful API with authentication, posts, comments, and real-time chat.
-            </a>
-          </article>
+        <!-- Projects List Section -->
+        <div class="contain mt-16 flex flex-col gap-3">
+          <a href="https://github.com/retrojokerr" target="_blank" class="font-semibold text-xl">
+            Projects
+            <app-icon class="text-dimGrey" icon="link" size="sm"></app-icon>
+          </a>
+          <div class="flex flex-col gap-3">
+            <article v-for="(project, index) in projects" :key="index" class="flex md:flex-row flex-col md:items-center items-start md:gap-10 gap-0 md:pb-3 pb-5">
+              <a :href="project.link" class="text-dimGrey decoration-cuppy underline underline-offset-4">
+                {{ project.title }}
+              </a>
+            </article>
+          </div>
         </div>
-      </div>
 
         <!-- Work Experience Section -->
         <div class="contain mt-16 flex flex-col gap-3">
           <h2 class="text-xl font-semibold">Work Highlights</h2>
-          <tabs :mode="mode">
-            <tab title="BSES Delhi" position="Software Developer Trainee" company="BSES" companyURL="https://www.bsesdelhi.com/" :itemList="bsesItemList"/>
-          </tabs>
-
-
-<div style="margin-top: 10px; align-self: flex-start; display: flex; align-items: flex-end;">
-  <button style="background-color: #00B300;
-                 border: none;
-                 color: black;
-                 padding: 10px 20px;
-                 text-align: center;
-                 text-decoration: none;
-                 font-size: 16px;
-                 cursor: pointer;">
-    <a href="https://drive.google.com/file/d/1FYgIeMVlgDFZGA6Eu83SPlh66gTaxPju/view?usp=sharing" style="color: black; text-decoration: none;">Download Full CV</a>
-    <!-- a href="https://calendly.com/jbhv12" target="_blank" style="color: black; text-decoration: none;">Let's Talk!</a> -->
-  </button>   
-
-  <span style="margin-left: 10px;
-               font-size: 12px;
-               color: #00FF52; 
-               position: relative;
-               bottom: 2px;
-               line-height: 1;
-               font-size: 12px;"> 
-    <!-- <a href="https://github.com/jbhv12/resume" target="_blank">See how it's generated!</a> -->
-  </span>
-</div>
-
-
-
-  
+          
+          <div class="flex flex-col md:flex-row md:items-start gap-5">
+            <p class="text-pink-400 font-medium min-w-[150px]">BSES Delhi</p>
+            <tabs :mode="mode">
+              <tab title="Software Developer Trainee" company="BSES" companyURL="https://www.bsesdelhi.com/" :itemList="bsesItemList"/>
+            </tabs>
+          </div>
         </div>
 
-      
+        <!-- Download CV Button -->
+        <div class="mt-5 flex items-center gap-3">
+          <a href="https://drive.google.com/file/d/1FYgIeMVlgDFZGA6Eu83SPlh66gTaxPju/view?usp=sharing"
+             class="bg-green-500 text-black px-5 py-2 text-center font-medium rounded-md hover:bg-green-600 transition">
+            Download Full CV
+          </a>
+        </div>
 
-        <!-- Technologies List Section -->
+        <!-- Contact Section -->
         <div class="contain mt-5">
           <div class="mb-5">
-            <h2 class="text-xl font-semibold">Lets's Connect!</h2>
+            <h2 class="text-xl font-semibold">Let's Connect!</h2>
             <p class="mt-5">Feel free to reach out. Shoot me an <a href="mailto:hi@subandhu.tech" class="decoration-cuppy underline underline-offset-4">email</a>.</p>
           </div>
         </div>
@@ -118,9 +86,10 @@
 import Tab from '../components/Tab.vue'
 import Tabs from '../components/Tabs.vue'
 import Email from '../components/Email.vue'
+
 export default {
   metaInfo() {
-  return {
+    return {
       title: "Home | Subandhu.tech"
     }
   },
@@ -133,15 +102,27 @@ export default {
     return {
       mode: 'dark',
       bsesItemList: [
-        'Redesigned the user interface of the Process Improvement Management System (PIMS), resulting in a 30% increase in user engagement',
-        'Designed and implemented the frontend of PIMS portal using javascript.',
-        'Engineered the backend with Express.js and Node.js, optimizing data flow and storage; managed PostgreSQL database, ensuring 99.9% data integrity and 40% faster query response times'
+        'Redesigned the user interface of the Process Improvement Management System (PIMS), resulting in a 30% increase in user engagement.',
+        'Designed and implemented the frontend of PIMS portal using JavaScript.',
+        'Engineered the backend with Express.js and Node.js, optimizing data flow and storage; managed PostgreSQL database, ensuring 99.9% data integrity and 40% faster query response times.'
       ],
-      
+      projects: [
+        {
+          title: 'File Wizard - A file conversion website using Python and AWS (Lambda, S3).',
+          link: 'https://github.com/retrojokerr/FILE-WIZARD'
+        },
+        {
+          title: 'URL Shortener - A Node.js-based URL shortening service with MongoDB.',
+          link: 'https://www.shawty.site'
+        },
+        {
+          title: 'Social Media App API - RESTful API with authentication, posts, comments, and real-time chat.',
+          link: 'https://github.com/retrojokerr/Social-Media-App-API'
+        }
+      ]
     }
   }
 }
-  
 </script>
 
 <style>
@@ -171,18 +152,3 @@ export default {
   animation-play-state: running;
 }
 </style>
-
-<page-query>
-query {
-  posts: allArticles(perPage: 3) {
-    edges {
-      node {
-        id
-        title
-        path
-        date
-      }
-    }
-  }
-}
-</page-query>
