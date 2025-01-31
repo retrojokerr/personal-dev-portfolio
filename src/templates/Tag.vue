@@ -32,7 +32,7 @@
 export default {
   metaInfo() {
     return {
-      title: "Subandhu.tech",
+      title: "",
     }
   },
 };
