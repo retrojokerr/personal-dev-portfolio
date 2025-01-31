@@ -32,7 +32,7 @@
 export default {
   metaInfo() {
     return {
-      title: "Tag ==>" + " " + this.$page.tag.title
+      title: "Subandhu.tech",
     }
   },
 };
