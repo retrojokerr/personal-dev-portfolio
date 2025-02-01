@@ -63,49 +63,37 @@
         </div>
       </div>
 
-        <!-- Work Experience Section -->
-        <div class="contain mt-16 flex flex-col gap-3">
+ <!-- Work Experience Section -->
+ <div class="contain mt-16 flex flex-col gap-3">
           <h2 class="text-xl font-semibold">Work Highlights</h2>
-          <tabs :mode="mode">
-            <tab title="BSES Delhi" position="Software Developer Trainee" company="BSES" companyURL="https://www.bsesdelhi.com/" :itemList="bsesItemList"/>
-          </tabs>
+          
+          <div class="work-item">
+            <h3 class="text-lg font-medium">Software Developer Trainee at <a href="https://www.bsesdelhi.com/" target="_blank" class="text-blue-500">BSES Delhi</a></h3>
+            <ul class="list-disc pl-5 mt-2">
+              <li>Redesigned the user interface of the Process Improvement Management System (PIMS), resulting in a 30% increase in user engagement</li>
+              <li>Designed and implemented the frontend of PIMS portal using JavaScript.</li>
+              <li>Engineered the backend with Express.js and Node.js, optimizing data flow and storage; managed PostgreSQL database, ensuring 99.9% data integrity and 40% faster query response times</li>
+            </ul>
+          </div>
 
-
-<div style="margin-top: 10px; align-self: flex-start; display: flex; align-items: flex-end;">
-  <button style="background-color: #00B300;
-                 border: none;
-                 color: black;
-                 padding: 10px 20px;
-                 text-align: center;
-                 text-decoration: none;
-                 font-size: 16px;
-                 cursor: pointer;">
-    <a href="https://drive.google.com/file/d/1FYgIeMVlgDFZGA6Eu83SPlh66gTaxPju/view?usp=sharing" style="color: black; text-decoration: none;">Download Full CV</a>
-    <!-- a href="https://calendly.com/jbhv12" target="_blank" style="color: black; text-decoration: none;">Let's Talk!</a> -->
-  </button>   
-
-  <span style="margin-left: 10px;
-               font-size: 12px;
-               color: #00FF52; 
-               position: relative;
-               bottom: 2px;
-               line-height: 1;
-               font-size: 12px;"> 
-    <!-- <a href="https://github.com/jbhv12/resume" target="_blank">See how it's generated!</a> -->
-  </span>
-</div>
-
-
-
-  
+          <div style="margin-top: 10px; align-self: flex-start; display: flex; align-items: flex-end;">
+            <button style="background-color: #00B300;
+                           border: none;
+                           color: black;
+                           padding: 10px 20px;
+                           text-align: center;
+                           text-decoration: none;
+                           font-size: 16px;
+                           cursor: pointer;">
+              <a href="https://drive.google.com/file/d/1FYgIeMVlgDFZGA6Eu83SPlh66gTaxPju/view?usp=sharing" style="color: black; text-decoration: none;">Download Resume</a>
+            </button>   
+          </div>
         </div>
-
-      
 
         <!-- Technologies List Section -->
         <div class="contain mt-5">
           <div class="mb-5">
-            <h2 class="text-xl font-semibold">Lets's Connect!</h2>
+            <h2 class="text-xl font-semibold">Let's Connect!</h2>
             <p class="mt-5">Feel free to reach out. Shoot me an <a href="mailto:hi@subandhu.tech" class="decoration-cuppy underline underline-offset-4">email</a>.</p>
           </div>
         </div>
@@ -115,33 +103,22 @@
 </template>
 
 <script>
-import Tab from '../components/Tab.vue'
-import Tabs from '../components/Tabs.vue'
 import Email from '../components/Email.vue'
 export default {
   metaInfo() {
-  return {
+    return {
       title: "Home | Subandhu.tech"
     }
   },
   components: {
-    Tab,
-    Tabs,
     Email
   },
   data () {
     return {
-      mode: 'dark',
-      bsesItemList: [
-        'Redesigned the user interface of the Process Improvement Management System (PIMS), resulting in a 30% increase in user engagement',
-        'Designed and implemented the frontend of PIMS portal using javascript.',
-        'Engineered the backend with Express.js and Node.js, optimizing data flow and storage; managed PostgreSQL database, ensuring 99.9% data integrity and 40% faster query response times'
-      ],
-      
+      mode: 'dark'
     }
   }
 }
-  
 </script>
 
 <style>
@@ -159,8 +136,8 @@ export default {
    30% { transform: rotate(14.0deg) }
    40% { transform: rotate(-4.0deg) }
    50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }
-  100% { transform: rotate( 0.0deg) }
+   60% { transform:  rotate(0.0deg) }
+  100% { transform:  rotate(0.0deg) }
 }
 
 .wave:hover {
