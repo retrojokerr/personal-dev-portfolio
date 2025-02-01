@@ -68,15 +68,14 @@
           <h2 class="text-xl font-semibold">Work Highlights</h2>
           
           <div class="work-item">
-            <h3 class="text-lg font-medium">Software Developer Trainee at <a href="https://www.bsesdelhi.com/" target="_blank" class="text-blue-500">BSES Delhi</a></h3>
-            <ul class="list-disc pl-5 mt-2">
-              <li>Redesigned the user interface of the Process Improvement Management System (PIMS), resulting in a 30% increase in user engagement</li>
-              <li>Designed and implemented the frontend of PIMS portal using JavaScript.</li>
-              <li>Engineered the backend with Express.js and Node.js, optimizing data flow and storage; managed PostgreSQL database, ensuring 99.9% data integrity and 40% faster query response times</li>
-            </ul>
+            <h4 class="text-lg font-medium"><li>Software Developer Trainee at <a href="https://www.bsesdelhi.com/" target="_blank" class="text-blue-500">BSES Delhi</a></li></h4>
+            <div class="text-dimGrey leading-8" style="margin-top: 20px ;">
+              <p>I redesigned the PIMS UI, increasing user engagement by 30%, and built the frontend with JavaScript. I optimized the backend using Express.js and Node.js while managing the PostgreSQL database, ensuring 99.9% data integrity and 40% faster queries.</p>
+              
+            </div>
           </div>
 
-          <div style="margin-top: 10px; align-self: flex-start; display: flex; align-items: flex-end;">
+          <div style="margin-top: 70px; align-self: flex-start; display: flex; align-items: flex-end;">
             <button style="background-color: #00B300;
                            border: none;
                            color: black;
